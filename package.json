@@ -2,11 +2,7 @@
     "name": "test-web-cmp",
     "version": "0.0.0",
     "scripts": {
-        "ng": "ng",
-        "start": "ng serve",
-        "test": "ng test",
-        "lint": "ng lint",
-        "e2e": "ng e2e",
+        "serve": "ng serve --extraWebpackConfig webpack.serve.extra.js -o",
         "build": "npm run build:elements && npm run build:core",
         "build:elements": "ng build --prod --extraWebpackConfig webpack.extra.js --output-hashing none --single-bundle true",
         "build:core": "node ./node_modules/ts-node/dist/bin.js build-script.ts"
