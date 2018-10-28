@@ -4,12 +4,12 @@ const concat = require("concat");
 (async function build() {
     const files = [
         "node_modules/zone.js/dist/zone.min.js",
-        "node_modules/rxjs/bundles/rxjs.umd.js",
-        "node_modules/@angular/core/bundles/core.umd.js",
-        "node_modules/@angular/common/bundles/common.umd.js",
-        "node_modules/@angular/forms/bundles/forms.umd.js",
-        "node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
-        "node_modules/@angular/elements/bundles/elements.umd.js",
+        "node_modules/rxjs/bundles/rxjs.umd.min.js",
+        "node_modules/@angular/core/bundles/core.umd.min.js",
+        "node_modules/@angular/common/bundles/common.umd.min.js",
+        "node_modules/@angular/forms/bundles/forms.umd.min.js",
+        "node_modules/@angular/platform-browser/bundles/platform-browser.umd.min.js",
+        "node_modules/@angular/elements/bundles/elements.umd.min.js",
     ];
     await fs.ensureDir("dist/core");
     await concat(files, "dist/core/angular-core.js");
